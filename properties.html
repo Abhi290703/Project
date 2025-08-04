@@ -108,6 +108,46 @@
   border: 1px solid black;
   margin-bottom: 10px;
 }
+
+.banner{
+  background-image:url("assests/video-bg.jpg");
+  height:300px;
+  background-size:auto;
+  background-position: center;
+  justify-content: center;
+  position:relative;
+  align-items: center;
+  text-align: center;
+}
+ .banner-container{
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 20px 40px;
+  border-radius: 5px;
+  text-align: center;
+  align-content: center;
+}
+ .button button{
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 5px;
+
+} 
+
+.button button.active{
+  color: white;
+  background-color: red;
+  
+}
+
+.button{
+  text-align: center;
+  margin: 20px;
+}
+
     </style>
 </head>
 <body>
@@ -148,37 +188,77 @@
   </div>
 
   <!-- banner section -->
+   <section class="banner">
+    <div class="banner-container">
+      <div>Home/Property</div>
+      <div><h2>PROPERTIES</h2></div>
+    </div>
+   </section>
+
+   <!-- buttons properties -->
+    <section class="button">
+      <button class="active">SHOW All</button>
+      <button>Apartment</button>
+      <button>Villa</button>
+      <button>PentHouse</button>
+    </section>
 
   <div class="property-container">
     <div class="item">
       <img src="/assests/property-01.jpg" alt="1">
       <button>Luxury Villa</button> <b><ins>$129,000</ins></b>
       <p>18 New Street Miami, OR 97219</p>
+      <p>Bedrooms:8  &nbsp;&nbsp;&nbsp;&nbsp; Bathrooms:8</p>
+      <p>Area: 545m2  &nbsp;&nbsp;&nbsp;&nbsp; Floor:3 &nbsp;&nbsp;&nbsp;&nbsp; <br> Parking:6spots</p>
     </div>
     <div class="item">
       <img src="/assests/property-02.jpg" alt="2">
       <button>Luxury Villa</button> <b><ins>$139,000</ins></b>
       <p>18 New Street Miami, OR 97219</p>
+      <p>Bedrooms:6 &nbsp;&nbsp;&nbsp;&nbsp; Bathrooms:5</p>
+      <p>Area:450m2 &nbsp;&nbsp;&nbsp;&nbsp; Floor:3 &nbsp;&nbsp;&nbsp;&nbsp; Parking:8spots</p>
     </div>
     <div class="item">
       <img src="/assests/property-03.jpg" alt="3">
       <button>Luxury Villa</button> <b><ins>$129,000</ins></b>
       <p>18 New Street Miami, OR 97219</p>
+      <p>Bedrooms:5 &nbsp;&nbsp;&nbsp;&nbsp; Bathrooms:4</p>
+      <p>Area:225m2 &nbsp;&nbsp;&nbsp;&nbsp; Floor:3 &nbsp;&nbsp;&nbsp;&nbsp; Parking:10spots</p>
     </div>
     <div class="item">
       <img src="/assests/property-04.jpg" alt="4">
       <button>Luxury Villa</button> <b><ins>$129,000</ins></b>
       <p>18 New Street Miami, OR 97219</p>
+      <p>Bedrooms:4 &nbsp;&nbsp;&nbsp;&nbsp; Bathrooms:3</p>
+      <p>Area:125m2 &nbsp;&nbsp;&nbsp;&nbsp; Floor:25th &nbsp;&nbsp;&nbsp;&nbsp; Parking:2cars</p>
     </div>
     <div class="item">
       <img src="/assests/property-05.jpg" alt="5">
       <button>Luxury Villa</button> <b><ins>$129,000</ins></b>
-      <p>18 New Street Miami, OR 97219</p>
+      <p>18 New Street Miami, OR 97219</p> 
+      <p>Bedrooms:4 &nbsp;&nbsp;&nbsp;&nbsp; Bathrooms:4 &nbsp;&nbsp;&nbsp;&nbsp; Area:180m2</p>
+      <p>Area:180m2 &nbsp;&nbsp;&nbsp;&nbsp; Floor:38th &nbsp;&nbsp;&nbsp;&nbsp; Parking:2cars</p>
     </div>
     <div class="item">
       <img src="/assests/property-06.jpg" alt="6">
       <button>Luxury Villa</button> <b><ins>$129,000</ins></b>
       <p>18 New Street Miami, OR 97219</p>
+      <p>Bedrooms:3 &nbsp;&nbsp;&nbsp;&nbsp; Bathrooms:2</p>
+      <p>Area:165m2 &nbsp;&nbsp;&nbsp;&nbsp; Floor:26th &nbsp;&nbsp;&nbsp;&nbsp; Parking:3cars</p>
+    </div>
+     <div class="item">
+      <img src="/assests/property-01.jpg" alt="1">
+      <button>Luxury Villa</button> <b><ins>$980,000</ins></b>
+      <p>18 New Street Miami, OR 97219</p>
+      <p>Bedrooms:8 &nbsp;&nbsp;&nbsp;&nbsp; Bathrooms:8</p>
+      <p>Area:550m2 &nbsp;&nbsp;&nbsp;&nbsp; Floor:3 &nbsp;&nbsp;&nbsp;&nbsp; Parking:12spots</p>
+    </div>
+     <div class="item">
+      <img src="/assests/property-02.jpg" alt="2">
+      <button>Luxury Villa</button> <b><ins>$1.520,000</ins></b>
+      <p>18 New Street Miami, OR 97219</p>
+      <p>Bedrooms:12 &nbsp;&nbsp;&nbsp;&nbsp; Bathrooms:15</p>
+      <p>Area:380m2 &nbsp;&nbsp;&nbsp;&nbsp; Floor:3 &nbsp;&nbsp;&nbsp;&nbsp; Parking:8spots</p>
     </div>
   </div>
 </section>
