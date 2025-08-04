@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties</title>
+    <style>
+
+ .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: antiquewhite;
+      padding: 8px;
+      font-size: small;
+      border-bottom: 1px solid black;
+    }
+
+    .top-left span {
+      margin-right: 10px;
+    }
+
+    .top-right a {
+      margin-left: 10px;
+      text-decoration: none;
+      color: black;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px ;
+      background-color: white;
+      border-bottom: 1px solid wheat;
+      position:sticky;
+      top: 10px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .navbar {
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      color: red;
+    }
+
+    .visit-button {
+      color: white;
+      background-color: red;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+      align-items: center;
+    }
+
+ .intro-header {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.property-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; 
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+.item {
+  border: 1px solid white;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  /* margin-bottom: 15px; */
+}
+
+.item button {
+  background-color: orangered;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+    </style>
+</head>
+<body>
+
+    <div class="top-header">
+    <div class="top-left">
+      <span>📧 info@company.com</span>
+      <span>📍 Sunny Isles Beach, FL 33160</span>
+    </div>
+    <div class="top-right">
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+  </div>
+
+    <header class="header">
+    <div class="logo">VILLA</div>
+    <div class="container">
+      <nav class="navbar">
+        <a class="active" href="#">Home</a>
+        <a href="/properties.html">Properties</a>
+        <a href="#">Property Details</a>
+        <a href="/contact.html">Contact Us</a>
+      </nav>
+      <button class="visit-button">
+        <i class="fa-solid fa-calendar"></i>
+        Schedule a Visit
+      </button>
+    </div>
+  </header>
+
+    <section class="intro">
+  <div class="intro-header">
+    <div class="property-title" style="color: red;">| <span>Properties</span></div>
+    <h2>We Provide the Best Property Like You</h2>
+  </div>
+
+  <div class="property-container">
+    <div class="item">
+      <img src="/assests/property-01.jpg" alt="1">
+      <button>Luxury Villa</button> <b><ins>$129,000</ins></b>
+      <p>18 New Street Miami, OR 97219</p>
+    </div>
+    <div class="item">
+      <img src="/assests/property-02.jpg" alt="2">
+      <button>Luxury Villa</button> <b><ins>$139,000</ins></b>
+      <p>18 New Street Miami, OR 97219</p>
+    </div>
+    <div class="item">
+      <img src="/assests/property-03.jpg" alt="3">
+      <button>Luxury Villa</button> <b><ins>$129,000</ins></b>
+      <p>18 New Street Miami, OR 97219</p>
+    </div>
+    <div class="item">
+      <img src="/assests/property-04.jpg" alt="4">
+      <button>Luxury Villa</button> <b><ins>$129,000</ins></b>
+      <p>18 New Street Miami, OR 97219</p>
+    </div>
+    <div class="item">
+      <img src="/assests/property-05.jpg" alt="5">
+      <button>Luxury Villa</button> <b><ins>$129,000</ins></b>
+      <p>18 New Street Miami, OR 97219</p>
+    </div>
+    <div class="item">
+      <img src="/assests/property-06.jpg" alt="6">
+      <button>Luxury Villa</button> <b><ins>$129,000</ins></b>
+      <p>18 New Street Miami, OR 97219</p>
+    </div>
+  </div>
+</section>
+
+        <!-- contact -->
+    <section class="contact-section">
+  <div class="contact-container">
+
+    <!-- Map -->
+    <div class="contact-map">
+      <iframe src="https://www.google.com/maps?q=Baga+Beach+Goa&output=embed" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <!-- Contact Form -->
+    <form class="contact-form">
+      <label>Full Name</label>
+      <input type="text" placeholder="Your Name..">
+
+      <label>Email Address</label>
+      <input type="email" placeholder="Your E-mail..">
+
+      <label>Subject</label>
+      <input type="text" placeholder="Subject..">
+
+      <label>Message</label>
+      <textarea placeholder="Your Message"></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Contact Info  -->
+     <div class="contact-info">
+      <div class="info-card">
+        <a href="#"><i class="fa-solid fa-phone"></i></a>
+        <span>9948233025</span>
+        </div>
+      <div class="info-card">
+        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+        <span>info@villa.co</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+        <!-- footer section -->
+    <footer style="text-align: center; background-color: black; color: white; width: 20px height: 20px;">
+        <div>Copyright © 2003 Villa Agency Co,LTD.All Rights Reserved.Design:Abhilash</div>
+    </footer>
+</body>
+</html>

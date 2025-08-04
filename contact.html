@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Contact Us</title>
+   <style>
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px ;
+      background-color: white;
+      border-bottom: 1px solid wheat;
+      position:sticky;
+      top: 10px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .navbar {
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      color: red;
+    }
+
+    .visit-button {
+      color: white;
+      background-color: red;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+      align-items: center;
+    }
+
+    .contact-section {
+  padding: 40px;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.contact-map iframe {
+  width: 350px;
+  height: 350px;
+  border-radius: 10px;
+}
+
+.contact-form {
+  flex: 1;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize:none;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+   .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: antiquewhite;
+      padding: 8px;
+      font-size: small;
+      border-bottom: 1px solid black;
+    }
+
+    .top-left span {
+      margin-right: 10px;
+    }
+
+    .top-right a {
+      margin-left: 10px;
+      text-decoration: none;
+      color: black;
+    }
+   </style>
+</head>
+<body>
+
+     <div class="top-header">
+    <div class="top-left">
+      <span>📧 info@company.com</span>
+      <span>📍 Sunny Isles Beach, FL 33160</span>
+    </div>
+    <div class="top-right">
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+  </div>
+
+    <header class="header">
+    <div class="logo">VILLA</div>
+    <div class="container">
+      <nav class="navbar">
+        <a class="active" href="#">Home</a>
+        <a href="/properties.html">Properties</a>
+        <a href="#">Property Details</a>
+        <a href="/contact.html">Contact Us</a>
+      </nav>
+      <button class="visit-button">
+        <i class="fa-solid fa-calendar"></i>
+        Schedule a Visit
+      </button>
+    </div>
+  </header>
+
+     <!-- Contact Form -->
+    <form class="contact-form">
+      <label>Full Name</label>
+      <input type="text" placeholder="Your Name..">
+
+      <label>Email Address</label>
+      <input type="email" placeholder="Your E-mail..">
+
+      <label>Subject</label>
+      <input type="text" placeholder="Subject..">
+
+      <label>Message</label>
+      <textarea placeholder="Your Message"></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Contact Info  -->
+     <div class="contact-info">
+      <div class="info-card">
+        <a href="#"><i class="fa-solid fa-phone"></i></a>
+        <span>9948233025</span>
+        </div>
+      <div class="info-card">
+        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+        <span>info@villa.co</span>
+      </div>
+    </div>
+
+</body>
+</html>
