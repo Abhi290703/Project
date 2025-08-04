@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
+    <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
    <style>
 
     .header {
@@ -55,35 +56,153 @@
       align-items: center;
     }
 
-    .contact-section {
-  padding: 40px;
-  background-color: white;
-  border: 1px solid black;
+    /* banner section */
+    .banner{
+  background-image:url("assests/video-bg.jpg");
+  height:300px;
+  background-size:auto;
+  background-position: center;
+  justify-content: center;
+  position:relative;
+  align-items: center;
+  text-align: center;
+}
+ .banner-container{
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 20px 40px;
+  border-radius: 5px;
+  text-align: center;
+  align-content: center;
 }
 
-.contact-map iframe {
-  width: 350px;
-  height: 350px;
+    /* contact us */
+    body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-section {
+  padding: 50px 20px;
+  background: #fff;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.contact-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-label {
+  color: orangered;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.contact-left h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.contact-desc {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 30px;
+  max-width: 400px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  background: white;
   border-radius: 10px;
+  padding: 15px 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.contact-card i {
+  font-size: 28px;
+  color: orangered;
 }
 
 .contact-form {
   flex: 1;
-  width: 300px;
+  min-width: 300px;
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
+}
+
+.contact-form label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
 }
 
 .contact-form textarea {
-  height: 120px;
-  resize:none;
+  border-radius: 15px;
+  resize: vertical;
+  min-height: 100px;
 }
 
-.icon {
-  width: 24px;
-  height: 24px;
+.contact-form button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  width: fit-content;
+  align-self: flex-start;
+  padding: 10px 20px;
+  transition: background 0.3s ease;
 }
+
+.contact-form button:hover {
+  background: orangered;
+}
+
+.map-container {
+  margin-top: 50px;
+  width: 100%;
+  height: 400px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+    /* top-header */
    .top-header {
       display: flex;
       justify-content: space-between;
@@ -136,34 +255,67 @@
     </div>
   </header>
 
+    <!-- banner section -->
+   <section class="banner">
+    <div class="banner-container">
+      <div>Home/Contact us</div>
+      <div><h2>CONTACT US</h2></div>
+    </div>
+   </section>
+
      <!-- Contact Form -->
+    <!-- Contact Section -->
+<section class="contact-section">
+  <div class="contact-wrapper">
+    <!-- Left Content -->
+    <div class="contact-left">
+      <p class="contact-label">| CONTACT US</p>
+      <h2>Get In Touch<br>With Our Agents</h2>
+      <p class="contact-desc">
+        When you really need to download best websites, please remember our website XYZ. Also, tell your friends about our website. Thank you for visiting.
+      </p>
+
+      <div class="contact-card">
+        <i class="fas fa-phone-alt"></i>
+        <div>
+          <strong>9948233025</strong><br>
+          <small>Phone Number</small>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <strong>info@villa.co</strong><br>
+          <small>Business Email</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Contact Form -->
     <form class="contact-form">
       <label>Full Name</label>
-      <input type="text" placeholder="Your Name..">
+      <input type="text" placeholder="Your Name...">
 
       <label>Email Address</label>
-      <input type="email" placeholder="Your E-mail..">
+      <input type="email" placeholder="Your E-mail...">
 
       <label>Subject</label>
-      <input type="text" placeholder="Subject..">
+      <input type="text" placeholder="Subject...">
 
       <label>Message</label>
       <textarea placeholder="Your Message"></textarea>
 
       <button type="submit">Send Message</button>
     </form>
+  </div>
 
-    <!-- Contact Info  -->
-     <div class="contact-info">
-      <div class="info-card">
-        <a href="#"><i class="fa-solid fa-phone"></i></a>
-        <span>9948233025</span>
-        </div>
-      <div class="info-card">
-        <a href="#"><i class="fa-solid fa-envelope"></i></a>
-        <span>info@villa.co</span>
-      </div>
-    </div>
+  <!-- Google Map -->
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps?q=Sunny+Isles+Beach&output=embed" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</section>
+
 
 </body>
 </html>
