@@ -8,7 +8,30 @@
 
    <style>
 
-    .header {
+    /* top-header */
+     .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: antiquewhite;
+      padding: 8px;
+      font-size: small;
+      border-bottom: 1px solid black;
+    }
+
+    .top-left span {
+      margin-right: 10px;
+    }
+
+    .top-right a {
+      margin-left: 10px;
+      text-decoration: none;
+      color: black;
+    }
+
+    /* header-section */
+    
+ .header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -239,13 +262,14 @@
     </div>
   </div>
 
-    <header class="header">
+    <!-- header section -->
+ <header class="header">
     <div class="logo">VILLA</div>
     <div class="container">
       <nav class="navbar">
-        <a class="active" href="#">Home</a>
+        <a class="active" href="/home.html">Home</a>
         <a href="/properties.html">Properties</a>
-        <a href="#">Property Details</a>
+        <a href="/Property Details.html">Property Details</a>
         <a href="/contact.html">Contact Us</a>
       </nav>
       <button class="visit-button">

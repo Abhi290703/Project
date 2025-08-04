@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Property Details</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: antiquewhite;
+      padding: 8px;
+      font-size: small;
+      border-bottom: 1px solid black;
+    }
+
+    .top-left span {
+      margin-right: 10px;
+    }
+
+    .top-right a {
+      margin-left: 10px;
+      text-decoration: none;
+      color: black;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      /* align-items: center; */
+      padding: 20px ;
+      background-color: white;
+      border-bottom: 1px solid wheat;
+      position:sticky;
+      top: 10px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      align-items:left;
+      gap: 20px;
+    }
+
+    .navbar {
+      display: flex;
+      gap: 20px;
+      align-items: left;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      color: red;
+    }
+
+    .visit-button {
+      color: white;
+      background-color: red;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+      align-items: center;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .property-overview {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    .property-overview img {
+      flex: 2;
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .property-details {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .detail-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .detail-card i {
+      font-size: 24px;
+      color: orangered;
+    }
+
+    .description {
+      margin-top: 30px;
+    }
+
+    .description h3 {
+      color: #111;
+      font-size: 18px;
+    }
+
+    .highlight-box {
+      background-color: #f2f2f2;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+
+    .highlight-box p {
+      margin-bottom: 10px;
+    }
+
+    /* Best Deal Section */
+    .deal-section {
+      background: #f3f3f3;
+      padding: 60px 20px;
+    }
+
+    .deal-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .deal-left {
+      flex: 1;
+    }
+
+    .deal-left h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .tab-buttons {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .tab-buttons button {
+      padding: 8px 18px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 600;
+      background-color: #ddd;
+    }
+
+    .tab-buttons .active {
+      background-color: orangered;
+      color: white;
+    }
+
+    .room-info {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 15px;
+    }
+
+    .deal-img {
+      flex: 1;
+    }
+
+    .deal-img img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .deal-desc {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 20px;
+    }
+
+    .schedule-btn {
+      padding: 10px 18px;
+      background-color: orangered;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* banner section */
+.banner{
+  background-image:url("assests/video-bg.jpg");
+  height:300px;
+  background-size:auto;
+  background-position: center;
+  justify-content: center;
+  position:relative;
+  align-items: center;
+  text-align: center;
+}
+ .banner-container{
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 20px 40px;
+  border-radius: 5px;
+  text-align: center;
+  align-content: center;
+}
+  </style>
+</head>
+<body>
+
+    <div class="top-header">
+    <div class="top-left">
+      <span>📧 info@company.com</span>
+      <span>📍 Sunny Isles Beach, FL 33160</span>
+    </div>
+    <div class="top-right">
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+  </div>
+
+    <!-- header section -->
+ <header class="header">
+    <div class="logo">VILLA</div>
+    <div class="container">
+      <nav class="navbar">
+        <a class="active" href="/home.html">Home</a>
+        <a href="/properties.html">Properties</a>
+        <a href="/Property Details.html">Property Details</a>
+        <a href="/contact.html">Contact Us</a>
+      </nav>
+      <button class="visit-button">
+        <i class="fa-solid fa-calendar"></i>
+        Schedule a Visit
+      </button>
+    </div>
+  </header>
+
+    <!-- banner section -->
+   <section class="banner">
+    <div class="banner-container">
+      <div>Home/Property</div>
+      <div><h2>PROPERTIES</h2></div>
+    </div>
+   </section>
+
+
+  <!-- Property Overview Section -->
+  <section class="container property-overview">
+    <img src="/assests/property-01.jpg" alt="Villa" />
+    
+    <div class="property-details">
+      <div class="detail-card">
+        <i class="fa-solid fa-ruler-combined"></i>
+        <div>
+          <strong>450 m²</strong><br><small>Total Area</small>
+        </div>
+      </div>
+      <div class="detail-card">
+        <i class="fa-solid fa-file-contract"></i>
+        <div>
+          <strong>Contract</strong><br><small>Legal Documents</small>
+        </div>
+      </div>
+      <div class="detail-card">
+        <i class="fa-solid fa-credit-card"></i>
+        <div>
+          <strong>Payment</strong><br><small>Flexible Plans</small>
+        </div>
+      </div>
+      <div class="detail-card">
+        <i class="fa-solid fa-shield-halved"></i>
+        <div>
+          <strong>Safety</strong><br><small>24/7 Security</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Description -->
+  <div class="container description">
+    <h3>24 New Street Miami, OR 24560</h3>
+    <p>Get the best villa agency. Villa Agency is a modern HTML CSS template for your company website...</p>
+
+    <div class="highlight-box">
+      <p><strong>Best useful links?</strong></p>
+      <p>Dolor almesit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p><a href="#">Why is Villa the best?</a></p>
+    </div>
+  </div>
+
+  <!-- Best Deal Section -->
+  <section class="deal-section">
+    <div class="deal-container">
+      <div class="deal-left">
+        <p style="color: orangered; font-weight: bold;">| SHORT DEAL</p>
+        <h2>Find Your Best Deal Right Now!</h2>
+        <div class="tab-buttons">
+          <button class="active">Apartment</button>
+          <button>Villa House</button>
+          <button>Penthouse</button>
+        </div>
+
+        <div class="room-info">
+          <div>Total Flat Space: <strong>540 m²</strong></div>
+          <div>Bedrooms: <strong>4</strong></div>
+          <div>Bathrooms: <strong>2</strong></div>
+          <div>Parking Available: <strong>Yes</strong></div>
+          <div>Payment Process: <strong>Bank</strong></div>
+        </div>
+      </div>
+
+      <div class="deal-img">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Deal Room" />
+        <p class="deal-desc">This apartment features modern design with excellent lighting and ventilation.</p>
+        <button class="schedule-btn">Schedule a Visit</button>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

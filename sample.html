@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Villa Header</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 50px;
+      background-color: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .logo {
+      font-size: 22px;
+      color: #111;
+      font-weight: normal;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 16px;
+      color: #111;
+      font-weight: normal;
+      transition: color 0.2s ease;
+    }
+
+    nav a.active {
+      color: red;
+    }
+
+    .visit-btn {
+      background-color: red;
+      color: white;
+      padding: 8px 18px;
+      border-radius: 25px;
+      border: none;
+      font-weight: normal;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      transition: background 0.3s ease;
+    }
+
+    .visit-btn i {
+      font-size: 14px;
+    }
+
+    .visit-btn:hover {
+      background-color: darkred;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">VILLA</div>
+    <nav>
+      <a href="#" class="active">Home</a>
+      <a href="#">Properties</a>
+      <a href="#">Property Details</a>
+      <a href="#">Contact Us</a>
+      <button class="visit-btn">
+        <i class="fa-solid fa-calendar-days"></i>
+        Schedule a Visit
+      </button>
+    </nav>
+  </header>
+
+</body>
+</html>
