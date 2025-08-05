@@ -28,53 +28,54 @@
     }
 
     .header {
-      display: flex;
-      justify-content: space-between;
-      /* align-items: center; */
-      padding: 20px ;
-      background-color: white;
-      border-bottom: 1px solid wheat;
-      position:sticky;
-      top: 10px;
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* FIXED this line */
+  padding: 20px;
+  background-color: white;
+  border-bottom: 1px solid wheat;
+  position: sticky;
+  top: 10px;
+}
 
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-    }
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
 
-    .container {
-      display: flex;
-      align-items:left;
-      gap: 20px;
-    }
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Ensures nav and button are pushed to the right */
+  gap: 20px;
+  flex-grow: 1; /* Takes remaining space */
+}
 
-    .navbar {
-      display: flex;
-      gap: 20px;
-      align-items: left;
-    }
+.navbar {
+  display: flex;
+  gap: 20px;
+}
 
-    .navbar a {
-      text-decoration: none;
-      color: black;
-      font-weight: 500;
-    }
+.navbar a {
+  text-decoration: none;
+  color: black;
+  font-weight: normal; /* No bold */
+}
 
-    .navbar a:hover,
-    .navbar a.active {
-      color: red;
-    }
+.navbar a:hover,
+.navbar a.active {
+  color: red;
+}
 
-    .visit-button {
-      color: white;
-      background-color: red;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 20px;
-      font-weight: bold;
-      align-items: center;
-    }
+.visit-button {
+  color: white;
+  background-color: red;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  align-items: center;
+}
 
     body {
       font-family: 'Segoe UI', sans-serif;
