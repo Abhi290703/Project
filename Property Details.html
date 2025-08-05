@@ -27,55 +27,60 @@
       color: black;
     }
 
-    .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* FIXED this line */
-  padding: 20px;
-  background-color: white;
-  border-bottom: 1px solid wheat;
-  position: sticky;
-  top: 10px;
-}
+    
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: white;
+      border-bottom: 1px solid #eee;
+    }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-}
+    .logo {
+      font-size: 24px;
+      font-weight: normal;
+    }
 
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end; /* Ensures nav and button are pushed to the right */
-  gap: 20px;
-  flex-grow: 1; /* Takes remaining space */
-}
+    .nav-container {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
 
-.navbar {
-  display: flex;
-  gap: 20px;
-}
+    .navbar {
+      display: flex;
+      gap: 25px;
+    }
 
-.navbar a {
-  text-decoration: none;
-  color: black;
-  font-weight: normal; /* No bold */
-}
+    .navbar a {
+      text-decoration: none;
+      color: black;
+      font-weight: normal;
+      transition: color 0.3s;
+    }
 
-.navbar a:hover,
-.navbar a.active {
-  color: red;
-}
+    .navbar a:hover,
+    .navbar a.active {
+      color: red;
+    }
 
-.visit-button {
-  color: white;
-  background-color: red;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 20px;
-  font-weight: bold;
-  align-items: center;
-}
+    .visit-button {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    .visit-button i {
+      font-size: 16px;
+    }
 
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -262,9 +267,9 @@
   </div>
 
     <!-- header section -->
- <header class="header">
+ <header>
     <div class="logo">VILLA</div>
-    <div class="container">
+    <div class="nav-container">
       <nav class="navbar">
         <a class="active" href="/home.html">Home</a>
         <a href="/properties.html">Properties</a>
@@ -272,8 +277,7 @@
         <a href="/contact.html">Contact Us</a>
       </nav>
       <button class="visit-button">
-        <i class="fa-solid fa-calendar"></i>
-        Schedule a Visit
+        <i class="fa-solid fa-calendar"></i> Schedule a Visit
       </button>
     </div>
   </header>
