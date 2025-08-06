@@ -31,15 +31,14 @@
     header {
       display: flex;
       justify-content: space-between;
-      align-items: center;
       padding: 20px 50px;
       background-color: white;
-      border-bottom: 1px solid #eee;
+      border: 1px solid #eee;
     }
 
     .logo {
-      font-size: 24px;
-      /* font-weight: normal; */
+      font-size: 25px;
+      font-style:normal
     }
 
     .container {
@@ -50,14 +49,15 @@
 
     .navbar {
       display: flex;
-      gap: 25px;
+      gap: 10px;
     }
 
     .navbar a {
       text-decoration: none;
       color: black;
       font-weight: normal;
-      transition: color 0.3s;
+      /* transition: color 0.3s; */
+      align-content: flex-end;
     }
 
     .navbar a:hover,
@@ -82,12 +82,12 @@
       font-size: 16px;
     }
 
-    body {
+    /* body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f9f9f9;
-    }
+    } */
 
     .container {
       max-width: 1200px;
@@ -233,7 +233,7 @@
     /* banner section */
 .banner{
   background-image:url("assests/video-bg.jpg");
-  height:300px;
+  height:200px;
   background-size:auto;
   background-position: center;
   justify-content: center;
@@ -249,6 +249,15 @@
   text-align: center;
   align-content: center;
 }
+ /* .button button{
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 5px;
+
+}  */
   </style>
 </head>
 <body>
