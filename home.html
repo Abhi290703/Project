@@ -77,12 +77,25 @@
 
         /* banner style */
 
-.banner img {
+.banner img 
+    {
       width: 100%;
       height: auto;
       display: block;
     }
 
+.banner-section-img
+{
+  position: absolute;
+  top: 50%;                 
+  left: 10%;                 
+  /* transform: translateY(-50%); */
+  color: white;
+  font-size: 28px;
+  
+ 
+}
+    
     /* second banner */
 
 .second-banner{
@@ -177,8 +190,7 @@
   font-size: 20px;
   padding: 30px 40px;
   border-radius: 10px;
-  text-align: center;
-  align-items: center;    
+      
   display: inline-block;
   gap: 20px;    
 
@@ -347,7 +359,12 @@
     <!-- bannner -->
   <section class="banner">
     <img src="/assests/banner-01.jpg" alt="banner 01" />
-    <!-- <div><h2>Get the</h2> <br> <h2>Best Villa</h2> <br> <h2> For You </h2></div> -->
+    <div class="banner-section-img">
+      <div>Get the</div>
+      <div>Best Villa</div>
+      <div>For You</div>
+      
+    </div>
   </section>
 
   <!--  second Banner Section -->
