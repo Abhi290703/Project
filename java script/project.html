@@ -6,16 +6,48 @@
     <title>Meal Finder</title>
     <link rel="stylesheet" href="project.js">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body>
+    <!-- header section -->
     <header>
-        <div class="container bg-orange-500 p-3">
-            <h1 class="text-left text-xl mb-4 text-white">🍽️Meal Finder</h1>
+        <div class="container bg-orange-500 p-3 me-2">
+            <h1 class="text-left text-xl mb-4 text-white">🍽️MEAL FINDER <i class="fa-solid fa-bars"></i></h1>
         </div>
     </header>
 
+    <!-- banner section -->
+   <section
+  class="flex flex-col items-center justify-center h-[50vh] bg-cover bg-center mb-5 relative"
+  style="background-image: url('https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141340.jpg');"
+>
+
+  <!-- Content -->
+  <div class="relative z-10 text-center">
+    <!-- Search bar -->
+    <div class="flex justify-center mb-6 ">
+      <input
+        type="text"
+        placeholder="Search new recipes here..."
+        class="text-white bg-white-100 placeholder-white w-72 rounded-full inline-block text-center"
+        id="search-input"
+      />
+      <div class="bg-orange-500 text-white p-3 rounded-full inline-block">
+      <i class="fa-solid fa-magnifying-glass text-xl"></i>
+      </div>
+    </div>
+
+    <!-- Headings -->
+    <h2 class="text-white text-3xl font-bold">What is Your Favorite Cuisine</h2>
+    <p class="text-white mt-2 text-sm md:text-base tracking-wider">
+      PERSONALIZE YOUR EXPERIENCE
+    </p>
+  </div>
+</section>  
+
+    <!-- categories section -->
+    <h1 class="text-2xl font-bold text-left">Categories</h1>
 <script src="project.js"></script>
 </body>
 </html>
