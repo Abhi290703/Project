@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: antiquewhite;
+      padding: 8px;
+      font-size: small;
+      border-bottom: 1px solid black;
+    }
+
+    .top-left span {
+      margin-right: 10px;
+    }
+
+    .top-right a {
+      margin-left: 10px;
+      text-decoration: none;
+      color: black;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px ;
+      background-color: white;
+      border-bottom: 1px solid wheat;
+      position:sticky;
+      top: 10px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .navbar {
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      color: red;
+    }
+
+    .visit-button {
+      color: white;
+      background-color: red;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+      align-items: center;
+    }
+
+        /* banner style */
+
+.banner img 
+    {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+.banner-section-img
+{
+  position: absolute;
+  top: 50%;                 
+  left: 10%;                 
+  /* transform: translateY(-50%); */
+  color: white;
+  font-size: 28px;
+  font-weight: 100;
+ 
+}
+    
+    /* second banner */
+
+.second-banner{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap:wrap ;
+}
+
+.second-banner {
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 10px   ;
+}
+
+.banner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Left: Image */
+.banner-image {
+  flex: 1 1 30%;
+}
+.banner-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Center: Text */
+.banner-text {
+  flex: 1 1 40%;
+}
+.details {
+  font-size: 18px;
+  color: red;
+  margin-bottom: 10px;
+}
+.heading h2 {
+  margin: 5px 0;
+  font-size: 28px;
+  font-weight: bold;
+}
+.banner-text p {
+  color: #333;
+  font-size: 16px;
+  margin-top: 15px;
+  line-height: 1.5;
+}
+
+/* Right: Info Card */
+.info-card {
+  flex: 1 1 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  border: 1px solid #f2f2f2;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+}
+.icon-item img {
+  height: 50px;
+  margin-bottom: 8px;
+}
+.icon-item span {
+  font-size: 16px;
+}
+
+    /* third banner */
+.thrid-banner{
+    text-align: right;
+}
+.third-container img{
+    align-content:flex-end;
+    width: 50%;
+}
+.stats-card {
+  background-color:orangered; /* Bright orange */
+  color: black;
+  font-size: 20px;
+  padding: 30px 40px;
+  border-radius: 10px;
+  text-align: center;
+  align-items: center;    
+  display: inline-block;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.stats-card strong {
+  align-items: center;
+}
+
+    /* Best Deal */
+.deal-section {
+  background-color: lightgray;
+  padding: 20px;
+}
+
+.deal-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.deal-info {
+  flex: 1;
+}
+
+.deal-details {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+  line-height: 1.8;
+}
+
+.deal-image {
+  flex: 1;
+}
+
+.deal-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.deal-extra {
+  flex: 1;
+}
+
+.property-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.property-buttons button {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 6px;
+  padding: 8px 15px;
+  font-size: 14px;
+}
+
+/* properties */
+.intro-header {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.property-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; 
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+.item {
+  border: 1px solid white;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  /* margin-bottom: 15px; */
+}
+
+.item button {
+  background-color: orangered;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+    /* contact info */
+.contact-section {
+  background-color: #f9f9f9;
+  padding: 50px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.contact-map iframe {
+  width: 100%;
+  max-width: 350px;
+  height: 400px;
+  border-radius: 10px;
+  border: none;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.contact-form button {
+  padding: 12px;
+  background-color: orangered;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: darkorange;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
+}
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+
+  </style>
+</head>
+
+<body>
+  <!-- Top Contact Bar -->
+  <div class="top-header">
+    <div class="top-left">
+      <span>📧 info@company.com</span>
+      <span>📍 Sunny Isles Beach, FL 33160</span>
+    </div>
+    <div class="top-right">
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <header class="header">
+    <div class="logo">VILLA</div>
+    <div class="container">
+      <nav class="navbar">
+        <a class="active" href="/home.html">Home</a>
+        <a href="/properties.html">Properties</a>
+        <a href="/Property Details.html">Property Details</a>
+        <a href="/contact.html">Contact Us</a>
+      </nav>
+      <button class="visit-button">
+        <i class="fa-solid fa-calendar"></i>
+        Schedule a Visit
+      </button>
+    </div>
+  </header>
+
+    <!-- bannner -->
+  <section class="banner">
+    <img src="/assests/banner-01.jpg" alt="banner 01" />
+    <div class="banner-section-img">
+      <div>Get the</div>
+      <div>Best Villa</div>
+      <div>For You</div>
+      
+    </div>
+  </section>
+
+  <!--  second Banner Section -->
+ <section class="second-banner">
+  <div class="banner-container">
+    
+    <div class="banner-image">
+      <img src="/assests/featured.jpg" alt="second banner" />
+    </div>
+
+    <!-- Text Info -->
+    <div class="banner-text">
+      <div class="details">| <span>Featured</span></div>
+      <div class="heading">
+        <h2>Best Appartment</h2>
+        <h2>& Sea View</h2>
+      </div>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae animi, quos quasi cupiditateborum eveniet!
+      </p>
+    </div>
+
+    <!-- Info card -->
+    <div class="info-card">
+      <div class="icon-item">
+        <img src="./Assests/info-icon-01.png" alt="" />
+        <span>250 m2</span>
+      </div>
+      <div class="icon-item">
+        <img src="./Assests/info-icon-02.png" alt="" />
+        <span>Contract</span>
+      </div>
+      <div class="icon-item">
+        <img src="./Assests/info-icon-03.png" alt="" />
+        <span>Payment</span>
+      </div>
+      <div class="icon-item">
+        <img src="./Assests/info-icon-04.png" alt="" />
+        <span>Safety</span>
+      </div>
+    </div>
+  </div>
+</section>
+        <!-- video section -->
+    <section class="thrid-banner">
+        <div class="third-container">
+            <div class="video">
+                <img src="/assests/video-frame.jpg" alt="video">
+            </div>
+    </section>
+            <div class="stats-card">
+            <strong>34</strong> Buildings
+            </div>
+        </div>
+        <div class="stats-card">
+            <strong>12</strong> Years
+            </div>
+        </div>
+        <div class="stats-card">
+            <strong>24</strong> Awards
+            </div>
+        </div>
+
+        <!-- Best deal section -->
+        <section class="deal-section">
+        <div class="deal-container">
+    
+        <div class="deal-info">
+        <div class="title">Best Deal</div>
+        <h3>Find Your Best Deal</h3>
+         <h3>Right Now!</h3>
+        <div class="deal-details">
+        <div>Total Flat Surface: 185 m²</div>
+        <div>Floor Number: 26th</div>
+        <div>Number of Rooms: 4</div>
+        <div>Parking Available: Yes</div>
+        <div>Payment Process: Bank</div>
+      </div>
+    </div>
+
+    <div class="deal-image">
+      <img src="/assests/property-05.jpg" alt="Room" />
+    </div>
+
+    <div class="deal-extra">
+      <div class="property-buttons">
+        <button>Appartment</button>
+        <button>Pent House</button>
+        <button>Villa House</button>
+      </div>
+      <span>Extra Info About property</span>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+    
+  </div>
+</section>
+
+<!-- properties -->
+
+<section class="intro">
+  <div class="intro-header">
+    <div class="property-title" style="color: red;">| <span>Properties</span></div>
+    <h2>We Provide the Best Property Like You</h2>
+  </div>
+
+  <div class="property-container">
+    <div class="item">
+      <img src="/assests/property-01.jpg" alt="1">
+      <button>Luxury Villa</button> <b><ins>$129,000</ins></b>
+      <p>18 New Street Miami, OR 97219</p>
+    </div>
+    <div class="item">
+      <img src="/assests/property-02.jpg" alt="2">
+      <button>Luxury Villa</button> <b><ins>$139,000</ins></b>
+      <p>18 New Street Miami, OR 97219</p>
+    </div>
+    <div class="item">
+      <img src="/assests/property-03.jpg" alt="3">
+      <button>Luxury Villa</button> <b><ins>$129,000</ins></b>
+      <p>18 New Street Miami, OR 97219</p>
+    </div>
+    <div class="item">
+      <img src="/assests/property-04.jpg" alt="4">
+      <button>Luxury Villa</button> <b><ins>$129,000</ins></b>
+      <p>18 New Street Miami, OR 97219</p>
+    </div>
+    <div class="item">
+      <img src="/assests/property-05.jpg" alt="5">
+      <button>Luxury Villa</button> <b><ins>$129,000</ins></b>
+      <p>18 New Street Miami, OR 97219</p>
+    </div>
+    <div class="item">
+      <img src="/assests/property-06.jpg" alt="6">
+      <button>Luxury Villa</button> <b><ins>$129,000</ins></b>
+      <p>18 New Street Miami, OR 97219</p>
+    </div>
+  </div>
+</section>
+
+        <!-- contact -->
+    <section class="contact-section">
+  <div class="contact-container">
+
+    <!-- Map -->
+    <div class="contact-map">
+      <iframe src="https://www.google.com/maps?q=Baga+Beach+Goa&output=embed" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <!-- Contact Form -->
+    <form class="contact-form">
+      <label>Full Name</label>
+      <input type="text" placeholder="Your Name..">
+
+      <label>Email Address</label>
+      <input type="email" placeholder="Your E-mail..">
+
+      <label>Subject</label>
+      <input type="text" placeholder="Subject..">
+
+      <label>Message</label>
+      <textarea placeholder="Your Message"></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Contact Info  -->
+     <div class="contact-info">
+      <div class="info-card">
+        <a href="#"><i class="fa-solid fa-phone"></i></a>
+        <span>9948233025</span>
+        </div>
+      <div class="info-card">
+        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+        <span>info@villa.co</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+        <!-- footer section --><!-- footer section -->
+<footer style="text-align: center; background-color: black; color: white; padding: 20px;">
+    <div>Copyright © 2003 Villa Agency Co, LTD. All Rights Reserved. Design: Abhilash</div>
+</footer>
+    </body>
+</html>
