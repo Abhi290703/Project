@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+   <style>
+
+    /* top-header */
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: antiquewhite;
+      padding: 8px;
+      font-size: small;
+      border-bottom: 1px solid black;
+    }
+
+    .top-left span {
+      margin-right: 10px;
+    }
+
+    .top-right a {
+      margin-left: 10px;
+      text-decoration: none;
+      color: black;
+    }
+
+    /* header-section */
+    
+.header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px ;
+      background-color: white;
+      border: 1px solid wheat;
+      position:sticky;
+      top: 10px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .navbar {
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      color: red;
+    }
+
+    .visit-button {
+      color: white;
+      background-color: red;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+      align-items: center;
+    }
+
+    /* banner section */
+ .banner{
+  background-image:url("assests/video-bg.jpg");
+  height:200px;
+  background-size:auto;
+  background-position: center;
+  justify-content: center;
+  position:relative;
+  align-items: center;
+  text-align: center;
+}
+ .banner-container{
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 20px 40px;
+  border-radius: 5px;
+  text-align: center;
+  align-content: center;
+}
+ /* .button button{
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 5px;
+
+}  */
+
+    /* contact us */
+    body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-section {
+  padding: 50px 20px;
+  background: #fff;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.contact-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-label {
+  color: orangered;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.contact-left h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.contact-desc {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 30px;
+  max-width: 400px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  padding: 15px 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.contact-card i {
+  font-size: 28px;
+  color: orangered;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+}
+
+.contact-form textarea {
+  border-radius: 15px;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-form button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  width: fit-content;
+  align-self: flex-start;
+  padding: 10px 20px;
+  /* transition: background 0.3s ease; */
+}
+
+.contact-form button:hover {
+  background: orangered;
+}
+
+.map-container {
+  margin-top: 50px;
+  width: 100%;
+  height: 400px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+    /* top-header */
+   .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: antiquewhite;
+      padding: 8px;
+      font-size: small;
+      border-bottom: 1px solid black;
+    }
+
+    .top-left span {
+      margin-right: 10px;
+    }
+
+    .top-right a {
+      margin-left: 10px;
+      text-decoration: none;
+      color: black;
+    }
+   </style>
+</head>
+<body>
+
+     <div class="top-header">
+    <div class="top-left">
+      <span>📧 info@company.com</span>
+      <span>📍 Sunny Isles Beach, FL 33160</span>
+    </div>
+    <div class="top-right">
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+  </div>
+
+    <!-- header section -->
+ <header class="header">
+    <div class="logo">VILLA</div>
+    <div class="container">
+      <nav class="navbar">
+        <a class="active" href="/home.html">Home</a>
+        <a href="/properties.html">Properties</a>
+        <a href="/Property Details.html">Property Details</a>
+        <a href="/contact.html">Contact Us</a>
+      </nav>
+      <button class="visit-button">
+        <i class="fa-solid fa-calendar"></i>
+        Schedule a Visit
+      </button>
+    </div>
+  </header>
+
+    <!-- banner section -->
+   <section class="banner">
+    <div class="banner-container">
+      <div>Home/Contact us</div>
+      <div><h2>CONTACT US</h2></div>
+    </div>
+   </section>
+
+     <!-- Contact Form -->
+    <!-- Contact Section -->
+<section class="contact-section">
+  <div class="contact-wrapper">
+    <!-- Left Content -->
+    <div class="contact-left">
+      <p class="contact-label">| CONTACT US</p>
+      <h2>Get In Touch<br>With Our Agents</h2>
+      <p class="contact-desc">
+        When you really need to download best websites, please remember our website XYZ. Also, tell your friends about our website. Thank you for visiting.
+      </p>
+
+      <div class="contact-card">
+        <i class="fas fa-phone-alt"></i>
+        <div>
+          <strong>9948233025</strong><br>
+          <small>Phone Number</small>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <strong>info@villa.co</strong><br>
+          <small>Business Email</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Contact Form -->
+    <form class="contact-form">
+      <label>Full Name</label>
+      <input type="text" placeholder="Your Name...">
+
+      <label>Email Address</label>
+      <input type="email" placeholder="Your E-mail...">
+
+      <label>Subject</label>
+      <input type="text" placeholder="Subject...">
+
+      <label>Message</label>
+      <textarea placeholder="Your Message"></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <!-- Google Map -->
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps?q=Sunny+Isles+Beach&output=embed" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</section>
+
+
+</body>
+</html>
