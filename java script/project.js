@@ -17,16 +17,16 @@ document.addEventListener("click", (event) => {
 
 // Fetch and display categories
 fetch("https://www.themealdb.com/api/json/v1/1/categories.php")
-  .then(res => res.json())
-  .then(data => {
+  .then((res) => res.json())
+  .then((data) => {
     const categories = data.categories;
     mainCategories.innerHTML = "";
-    menuList.innerHTML = ""; // clear menu first
+    menuList.innerHTML = "";
 
     mainCategories.className =
       "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 p-6";
 
-    categories.forEach(category => {
+    categories.forEach((category) => {
       // Category Cards (Main)
       mainCategories.innerHTML += `
         <div class="relative bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition duration-300 cursor-pointer"
@@ -48,14 +48,16 @@ fetch("https://www.themealdb.com/api/json/v1/1/categories.php")
       `;
     });
   })
-  .catch(err => console.log("Error loading categories:", err));
+  .catch((err) => console.log("Error loading categories:", err));
 
-  function searchMeal(query) {
+
+// Function to search meal by name
+function searchMeal(query) {
   if (!query.trim()) return;
 
   fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`)
-    .then(res => res.json())
-    .then(data => {
+    .then((res) => res.json())
+    .then((data) => {
       const meals = data.meals;
       mainCategories.innerHTML = "";
 
@@ -69,67 +71,113 @@ fetch("https://www.themealdb.com/api/json/v1/1/categories.php")
       mainCategories.className =
         "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 p-6";
 
-      meals.forEach(meal => {
+      meals.forEach((meal) => {
         mainCategories.innerHTML += `
-          <div class="relative bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+          <div class="relative bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition duration-300 cursor-pointer"
+               onclick="displayLastItem('${meal.idMeal}')">
             <img src="${meal.strMealThumb}" alt="${meal.strMeal}" class="w-full h-48 object-cover">
-            <div class="absolute top-2 right-2 bg-orange-400 rounded-full text-white text-center p-2">
+            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-center p-2">
               <h4 class="text-sm font-semibold">${meal.strMeal}</h4>
             </div>
           </div>
         `;
       });
     })
-    .catch(err => console.log("Error fetching meals:", err));
+    .catch((err) => console.log("Error fetching meals:", err));
 }
-
-
-  // Elements for click function
-
-const searchInput = document.getElementById("search-input");
-const searchBtn = document.getElementById("search-btn");
 
 // Function to load meals by category
 function loadMealsByCategory(categoryName) {
   fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${categoryName}`)
-    .then(res => res.json())
-    .then(data => {
+    .then((res) => res.json())
+    .then((data) => {
       const meals = data.meals;
       mainCategories.innerHTML = "";
       mainCategories.className =
         "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 p-6";
 
-      meals.forEach(meal => {
+      meals.forEach((meal) => {
         mainCategories.innerHTML += `
-          <div class="relative bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition duration-300" onclick='displayLastItem(${meal.idMeal})'>
+          <div class="relative bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition duration-300 cursor-pointer"
+               onclick="displayLastItem('${meal.idMeal}')">
             <img src="${meal.strMealThumb}" alt="${meal.strMeal}" class="w-full h-48 object-cover">
-            <div class="absolute top-2 right-2 bg-orange-400 text-black text-center p-2">
+            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-center p-2">
               <h4 class="text-sm font-semibold">${meal.strMeal}</h4>
             </div>
           </div>
         `;
       });
     })
-    .catch(err => console.log("Error loading meals:", err));
+    .catch((err) => console.log("Error loading meals:", err));
 }
 
-// Click event for search button
+// Function to load a meal's full details
+function displayLastItem(mealId) {
+  fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
+    .then((res) => res.json())
+    .then((data) => {
+      const meal = data.meals[0];
+
+      // Get ingredients + measures
+      let ingredients = "";
+      for (let i = 1; i <= 20; i++) {
+        const ingredient = meal[`strIngredient${i}`];
+        const measure = meal[`strMeasure${i}`];
+        if (ingredient && ingredient.trim() !== "") {
+          ingredients += `<li>${measure} ${ingredient}</li>`;
+        }
+      }
+
+      // Replace the main content with meal details
+      mainCategories.innerHTML = `
+        <div class="bg-white shadow-lg rounded-xl p-6">
+          <button onclick="reloadCategories()" class="bg-orange-500 text-white px-4 py-2 rounded-lg mb-4 hover:bg-orange-600">
+            ← Back to Categories
+          </button>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <img src="${meal.strMealThumb}" alt="${meal.strMeal}" class="rounded-lg shadow-md">
+            
+            <div>
+              <h2 class="text-2xl font-bold text-orange-600 mb-2">${meal.strMeal}</h2>
+              <p><strong>Category:</strong> ${meal.strCategory}</p>
+              <p><strong>Area:</strong> ${meal.strArea}</p>
+              ${
+                meal.strYoutube
+                  ? `<a href="${meal.strYoutube}" target="_blank" class="text-blue-500 underline mt-2 inline-block">Watch Tutorial</a>`
+                  : ""
+              }
+            </div>
+          </div>
+
+          <h3 class="text-xl font-semibold mt-6 mb-2 text-orange-500">Ingredients:</h3>
+          <ul class="list-disc pl-5 text-gray-700">${ingredients}</ul>
+
+          <h3 class="text-xl font-semibold mt-6 mb-2 text-orange-500">Instructions:</h3>
+          <p class="text-gray-700 leading-relaxed">${meal.strInstructions}</p>
+        </div>
+      `;
+    })
+    .catch((err) => console.log("Error loading meal details:", err));
+}
+
+// Go back to the home categories
+function reloadCategories() {
+  window.location.reload();
+}
+
+// Search functionality
+const searchInput = document.getElementById("search-input");
+const searchBtn = document.getElementById("search-btn");
+
 searchBtn.addEventListener("click", () => {
   const query = searchInput.value;
   searchMeal(query);
 });
 
-// Press Enter to search
 searchInput.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
     const query = searchInput.value;
     searchMeal(query);
   }
 });
-
-//  displayLastItem(meal){
-//   fetch('https://www.themealdb.com/api/json/v1/1/lookup.php?i='+meal)
-  
-  
-// }
-
