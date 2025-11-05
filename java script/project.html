@@ -14,8 +14,17 @@
     <header>
         <div class="container bg-orange-500 p-3 flex justify-between relative">
             <h1 class="text-left text-xl mb-4 text-white">🍽️MEAL FINDER </h1>
+            
+            <!-- Menu Button -->
             <button id="menuBar" class="cursor-pointer">
             <i class="fa-solid fa-bars"></i></button>
+
+            <!-- side menubar -->
+            <nav id="sidebar"
+              class="hidden absolute top-14 right-3 bg-white shadow-lg rounded-lg w-48 p-3 z-50">
+              <ul id="menuList" class="flex flex-col gap-2 text-gray-800">
+              </ul>
+            </nav>
         </div>
     </header>
 
