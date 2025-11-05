@@ -16,13 +16,6 @@
             <h1 class="text-left text-xl mb-4 text-white">🍽️MEAL FINDER </h1>
             <button id="menuBar" class="cursor-pointer">
             <i class="fa-solid fa-bars"></i></button>
-            <nav id="sidebar" class="absolute top-0 right-0 hidden bg-white rounded-full text-black">
-              <ul class="text">
-                <li>
-                <i class="fa-solid fa-xmark"></i>
-                </li>
-              </ul>
-            </nav>
         </div>
     </header>
 
@@ -33,13 +26,11 @@
 >
     <!-- Search bar -->
     <div class="flex justify-center mb-6">
-      <input
-        type="text"
-        placeholder="Search new recipes here..."
+      <input type="text" placeholder="Search new recipes here..."
         class=" bg-white placeholder-gray w-72 rounded-full inline-block text-center border-2 border-gray "
         id="search-input"
       />
-      <div class="bg-orange-500 text-white p-3 rounded-full cursor-pointer">
+      <div id="search-btn" class="bg-orange-500 text-white p-3 rounded-full cursor-pointer">
       <i class="fa-solid fa-magnifying-glass text-xl"></i>
       </div>
     </div>
@@ -55,7 +46,7 @@
     <!-- categories section -->
     <h1 class="text-4xl mt-5 ml-5">Categories</h1>
     <div class="bg-orange-400 h-1 w-25 rounded-xl ml-6"></div>
-    <div class="mainCategories"></div>
+    <div id="mainCategories" class="mainCategories"></div>
 <script src="project.js"></script>
 </body>
 </html>
