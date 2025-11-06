@@ -76,7 +76,7 @@ function searchMeal(query) {
           <div class="relative bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition duration-300 cursor-pointer"
                onclick="displayLastItem('${meal.idMeal}')">
             <img src="${meal.strMealThumb}" alt="${meal.strMeal}" class="w-full h-48 object-cover">
-            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-center p-2">
+            <div class="absolute top-2 right-2 bg-orange-500 text-white text-xs px-2 py-2 font-semibold rounded-full">
               <h4 class="text-sm font-semibold">${meal.strMeal}</h4>
             </div>
           </div>
@@ -98,10 +98,10 @@ function loadMealsByCategory(categoryName) {
 
       meals.forEach((meal) => {
         mainCategories.innerHTML += `
-          <div class="relative bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition duration-300 cursor-pointer"
+          <div class="relative bg-white rounded-xl shadow-lg hover:scale-105 transition duration-300 cursor-pointer"
                onclick="displayLastItem('${meal.idMeal}')">
-            <img src="${meal.strMealThumb}" alt="${meal.strMeal}" class="w-full h-48 object-cover">
-            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-center p-2">
+            <img src="${meal.strMealThumb}" alt="${meal.strMeal}" class="w-full h-48">
+            <div class="absolute top-2 right-2 bg-orange-500 text-white text-xs px-2 py-2 font-semibold rounded-full">
               <h4 class="text-sm font-semibold">${meal.strMeal}</h4>
             </div>
           </div>
@@ -119,18 +119,28 @@ function displayLastItem(mealId) {
       const meal = data.meals[0];
 
       // Get ingredients + measures
-      let ingredients = "";
-      for (let i = 1; i <= 20; i++) {
-        const ingredient = meal[`strIngredient${i}`];
-        const measure = meal[`strMeasure${i}`];
-        if (ingredient && ingredient.trim() !== "") {
-          ingredients += `<li>${measure} ${ingredient}</li>`;
+      // ✅ Get ingredients
+        let ingredients = "";
+        for (let i = 1; i <= 20; i++) {
+          const ingredient = meal[`strIngredient${i}`];
+          if (ingredient && ingredient.trim() !== "") {
+            ingredients += `<li>${ingredient}</li>`;
+          }
         }
-      }
+
+        // ✅ Get measures
+        let measures = "";
+        for (let i = 1; i <= 20; i++) {
+          const measure = meal[`strMeasure${i}`];
+          if (measure && measure.trim() !== "") {
+            measures += `<li>${measure}</li>`;
+          }
+        }
+
 
       // Replace the main content with meal details
       mainCategories.innerHTML = `
-        <div class="bg-white shadow-lg rounded-xl p-6">
+        <div class="bg-white shadow-lg rounded-xl p-6 w-300">
           <button onclick="reloadCategories()" class="bg-orange-500 text-white px-4 py-2 rounded-lg mb-4 hover:bg-orange-600">
             ← Back to Categories
           </button>
@@ -139,27 +149,27 @@ function displayLastItem(mealId) {
             <img src="${meal.strMealThumb}" alt="${meal.strMeal}" class="rounded-lg shadow-md">
             
             <div>
-              <h2 class="text-2xl font-bold text-orange-600 mb-2">${meal.strMeal}</h2>
+              <h2 class="text-2xl font-bold text-orange-400 mb-2">${meal.strMeal}</h2>
               <p><strong>Category:</strong> ${meal.strCategory}</p>
               <p><strong>Area:</strong> ${meal.strArea}</p>
-              ${
-                meal.strYoutube
-                  ? `<a href="${meal.strYoutube}" target="_blank" class="text-blue-500 underline mt-2 inline-block">Watch Tutorial</a>`
-                  : ""
-              }
             </div>
           </div>
 
-          <h3 class="text-xl font-semibold mt-6 mb-2 text-orange-500">Ingredients:</h3>
+          <h3 class="text-xl font-semibold mt-6 mb-2 text-orange-400">Ingredients:</h3>
           <ul class="list-disc pl-5 text-gray-700">${ingredients}</ul>
 
-          <h3 class="text-xl font-semibold mt-6 mb-2 text-orange-500">Instructions:</h3>
-          <p class="text-gray-700 leading-relaxed">${meal.strInstructions}</p>
+          <h3 class="text-xl font-semibold mt-6 mb-2 text-orange-400">Measures:</h3>
+          <ul class="list-disc pl-5 text-gray-700">${measures}</ul>
+
+
+          <h3 class="text-xl font-semibold mt-6 mb-2 text-orange-400">Instructions:</h3>
+          <p class="text-gray-700 ">${meal.strInstructions}</p>
         </div>
       `;
     })
     .catch((err) => console.log("Error loading meal details:", err));
 }
+
 
 // Go back to the home categories
 function reloadCategories() {
