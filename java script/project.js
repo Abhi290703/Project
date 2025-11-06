@@ -112,6 +112,7 @@ function loadMealsByCategory(categoryName) {
 }
 
 // Function to load a meal's full details
+let detailaboutparticularitem=document.getElementById('detailaboutparticularitem')
 function displayLastItem(mealId) {
   fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
     .then((res) => res.json())
@@ -139,7 +140,7 @@ function displayLastItem(mealId) {
 
 
       // Replace the main content with meal details
-      mainCategories.innerHTML = `
+      detailaboutparticularitem.innerHTML = `
         <div class="bg-white shadow-lg rounded-xl p-6 w-300">
           <button onclick="reloadCategories()" class="bg-orange-500 text-white px-4 py-2 rounded-lg mb-4 hover:bg-orange-600">
             ← Back to Categories
