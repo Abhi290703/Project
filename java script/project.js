@@ -59,20 +59,20 @@ function searchMeal(query) {
     .then((res) => res.json())
     .then((data) => {
       const meals = data.meals;
-      mainCategories.innerHTML = "";
+      detailaboutparticularitem.innerHTML = "";
 
       if (!meals) {
-        mainCategories.innerHTML = `
+        detailaboutparticularitem.innerHTML = `
           <p class="text-center text-red-500 text-lg col-span-full">No meals found for "${query}"</p>
         `;
         return;
       }
 
-      mainCategories.className =
+      detailaboutparticularitem.className =
         "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 p-6";
 
       meals.forEach((meal) => {
-        mainCategories.innerHTML += `
+        detailaboutparticularitem.innerHTML += `
           <div class="relative bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition duration-300 cursor-pointer"
                onclick="displayLastItem('${meal.idMeal}')">
             <img src="${meal.strMealThumb}" alt="${meal.strMeal}" class="w-full h-48 object-cover">
@@ -92,12 +92,12 @@ function loadMealsByCategory(categoryName) {
     .then((res) => res.json())
     .then((data) => {
       const meals = data.meals;
-      mainCategories.innerHTML = "";
-      mainCategories.className =
+      detailaboutparticularitem.innerHTML = "";
+      detailaboutparticularitem.className =
         "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 p-6";
 
       meals.forEach((meal) => {
-        mainCategories.innerHTML += `
+        detailaboutparticularitem.innerHTML += `
           <div class="relative bg-white rounded-xl shadow-lg hover:scale-105 transition duration-300 cursor-pointer"
                onclick="displayLastItem('${meal.idMeal}')">
             <img src="${meal.strMealThumb}" alt="${meal.strMeal}" class="w-full h-48">
